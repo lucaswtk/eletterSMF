@@ -1,0 +1,32 @@
+{
+  "name": "lucaswtk/phptips",
+  "description": "Sistema de envio de cartas eletronicas",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lucas Gabriel Peixoto de Oliveira",
+      "email": "lucasgabrielpdoliveira@gmail.com",
+      "role": "Developer",
+      "homepage": "https://www.github.com/lucaswtk/"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "files": [
+      "source/Config.php"
+    ],
+    "psr-4": {
+      "Source\\": "source/"
+    }
+  },
+  "require": {
+    "php": "^7.2",
+    "ext-pdo": "*",
+    "coffeecode/datalayer": "1.1.*",
+    "coffeecode/router": "1.0.*",
+    "league/plates": "v4.0.0-alpha"
+  }
+}
