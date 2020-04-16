@@ -1,5 +1,7 @@
 <?php
-
+// Conversor para pdf https://pdf.io/pt/doc2pdf/
+// Remover pagina do pdf https://www.ilovepdf.com/pt/excluir-paginas-do-pdf
+// Conversor para html https://www.pdftohtml.net/
 session_start();
 
 require __DIR__ . "/vendor/autoload.php";
@@ -24,6 +26,7 @@ $router->post("/login", "Web:validateLogin", 'web.validateLogin');
 
 $router->get("/home", "Web:home", 'web.home');
 $router->get("/cardCreate", "Web:cardCreate", "web.cardCreate");
+$router->post("/validateCard", "Web:validateCard", "web.validateCard");
 $router->post("/fieldsFilter", "Web:fieldsFilter", "web.fieldsFilter");
 $router->get("/metadataCreate", "Web:metadataCreate", "web.metadataCreate");
 $router->post("/validateMetadata", "Web:validateMetadata", "web.validateMetadata");

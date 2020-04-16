@@ -62,7 +62,7 @@ input[type=number] {
 .main_content {
     padding: 5%;
     position: relative;
-    left: 8%;
+    left: 10%;
     top: 30px;
 }
 
@@ -203,6 +203,7 @@ input[type=number] {
 }
 
 body{
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
@@ -338,14 +339,17 @@ h4{
 .modelTextarea{
     float: left;
     width: 70%;
-    min-height: 350px;
+    height: 350px;
+    max-height: 350px;
+    overflow: auto;
 }
 
 .modelDiv{
     float: right;
     width: 28%;
     min-height: 350px;
-    overflow:auto;
+    overflow: auto;
+    max-height: 350px;
 }
 
 .pTitle{
@@ -374,4 +378,16 @@ h4{
     position: relative;
     bottom: -150px;
     text-align: center;
+}
+
+.btnSecondRight{
+    position: relative;
+    margin-bottom: 4%;
+    right: -10px;
+}
+
+.btnSecondLeft{
+    position: relative;
+    margin-bottom: 4%;
+    left: -10px;
 }
