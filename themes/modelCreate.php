@@ -26,7 +26,7 @@
         </div>
 
         <div class="btnDiv">
-            <button id="btnSubmit" type="button" class="btnCard">Cadastrar</button>
+            <button id="btnSubmit" type="submit" class="btnCard">Cadastrar</button>
         </div>
     </form>
 </div>

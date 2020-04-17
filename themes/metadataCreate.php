@@ -4,19 +4,19 @@
     <h3>Cadastro de metadados</h3>
 
     <form id="form" action="<?= $router->route('web.validateMetadata'); ?>" method="POST">
-        <label class="labelCardLeft">Nome do metadado
+        <label class="labelCard">Nome do metadado
             <input id="metadataName" class="myInput" type="text" title="Nome do metadado" name="metadataName" placeholder="Ex: nomeCadastrante" required>
         </label>
 
-        <label class="labelCardRight">Nome do label
+        <label class="labelCardLeft">Nome do label
             <input id="metadataLabel" class="myInput" type="text" title="Nome que aparecerá em cima do campo ao cadastrar cartas" name="metadataLabelName" placeholder="Ex: Nome cadastrante" required>
         </label>
 
-        <label class="labelCardLeft">Descrição
+        <label class="labelCardRight">Descrição
             <input id="metadataDecription" class="myInput" type="text" title="Descrição do metadado" name="metadataDescription" placeholder="Ex: Nome dado do usuário cadastrante" required>
         </label>
 
-        <label class="labelCardRight">Tipo
+        <label class="labelCardLeft">Tipo
             <select id="metadataType" class="myInput" name="metadataType" required>
                 <option class="opt0" value="0">Selecione o tipo do metadado</option>
                 <option value="Text">Text</option>
@@ -26,6 +26,13 @@
                 <option value="Tel">Tel</option>
                 <option value="Time">Time</option>
             </select>
+        </label>
+
+        <label class="labelCardRight">Campo obrigatório
+            <div class="checkDiv">
+                <input type="checkbox" id="requiredCheck" name="requiredCheck" value="1">
+                <label for="requiredCheck">É um campo obrigatório?</label>
+            </div>
         </label>
 
         <div class="btnDiv">

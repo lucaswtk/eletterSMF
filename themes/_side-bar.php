@@ -7,6 +7,7 @@
         <a title="Cadastrar carta" href="<?= url("cardCreate"); ?>"><i class="fa fa-align-left" style="font-size:16px;"></i> Cadastrar Carta</a>
         <a title="Cadastrar metadados" href="<?= url("metadataCreate"); ?>"><i class="fa fa-database" style="font-size:16px;"></i> Cadastrar Metadados</a>
         <a title="Cadastrar modelos" href="<?= url("modelCreate"); ?>"><i class="fa fa-modx" style="font-size:16px;"></i> Cadastrar Modelos</a>
+        <a title="Enviar lote" href="<?= url("lotSend"); ?>"><i class="fa fa-share" style="font-size:16px;"></i> Enviar Lote</a>
 		<a title="Encerrar sessão" href="<?= url('logout'); ?>"><i class="fa fa-fw fa-sign-out" style="font-size:16px;"></i> Sair</a>
 
         <div class="navDate">

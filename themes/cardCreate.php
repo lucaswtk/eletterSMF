@@ -5,27 +5,27 @@
     <form method="POST" action="<?= $router->route('web.validateCard'); ?>">
         <div id="firstPage">
             <label class="labelCard">Nome
-                <input id="receiverName" class="myInput" type="text" name="receiverName" title="Nome do destinatário" placeholder="Nome completo do destinatário" value="Lucas Gabriel Peixoto de Oliveira">
+                <input id="receiverName" class="myInput" type="text" name="receiverName" title="Nome do destinatário" placeholder="Nome completo do destinatário">
             </label>
 
             <label class="labelCardLeft">Rua
-                <input id="receiverStreet" class="myInput" type="text" name="receiverStreet" title="Rua do destinatário" placeholder="Endereço do destinatário" value="Rua Doutor Batista Aciole">
+                <input id="receiverStreet" class="myInput" type="text" name="receiverStreet" title="Rua do destinatário" placeholder="Endereço do destinatário">
             </label>
 
             <label class="labelCardRight">Número da residência
-                <input id="receiverNumberAddress" class="myInput" type="number" name="receiverNumberAddress" title="Número da residência" placeholder="Número da residência do destinatário" value="294">
+                <input id="receiverNumberAddress" class="myInput" type="number" name="receiverNumberAddress" title="Número da residência" placeholder="Número da residência do destinatário">
             </label>
 
             <label class="labelCardLeft">CEP
-                <input id="receiverPostcode" class="myInput" type="number" name="receiverPostcode" title="CEP do destinatário" placeholder="00000-000" value="57100000">
+                <input id="receiverPostcode" class="myInput" type="number" name="receiverPostcode" title="CEP do destinatário" placeholder="00000-000">
             </label>
 
             <label class="labelCardRight">Cidade
-                <input id="receiverCity" class="myInput" type="text" name="receiverCity" title="Cidade do destinatário" placeholder="Cidade do destinatário" value="Rio Largo">
+                <input id="receiverCity" class="myInput" type="text" name="receiverCity" title="Cidade do destinatário" placeholder="Cidade do destinatário">
             </label>
 
             <label class="labelCardLeft">Bairro
-                <input id="receiverNeighborhood" class="myInput" type="text" name="receiverNeighborhood" title="Bairro do destinatário" placeholder="Bairro do destinatário" value="Centro">
+                <input id="receiverNeighborhood" class="myInput" type="text" name="receiverNeighborhood" title="Bairro do destinatário" placeholder="Bairro do destinatário">
             </label>
 
             <label class="labelCardRight">Complemento
@@ -104,20 +104,35 @@
                 let values = e.split("$");
                 let aux  = values.length;
                 let count = 0;
+                let modelId;
                 values.splice(0, 1);
                 values.forEach(function (fieldValue) {
                     fieldValue = fieldValue.split("-");
+                    modelId = fieldValue[5];
                     if(count % 2 === 0){
                         if (count === (aux-2)){
-                            inputs = inputs + '<label class="labelCard">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'"></label> <div class="btnDiv"><button class="btnCard btnSecond btnSecondLeft" type="button" onclick="lastPage()">Voltar</button><button class="btnCard btnSecondRight">Cadastrar</button></div>';
+                            if(fieldValue[4] == 1){
+                                inputs = inputs + '<label class="labelCard">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'" required></label> <div class="btnDiv"><button class="btnCard btnSecond btnSecondLeft" type="button" onclick="lastPage()">Voltar</button><button class="btnCard btnSecondRight">Cadastrar</button></div>';
+                            }else{
+                                inputs = inputs + '<label class="labelCard">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'"></label> <div class="btnDiv"><button class="btnCard btnSecond btnSecondLeft" type="button" onclick="lastPage()">Voltar</button><button class="btnCard btnSecondRight">Cadastrar</button></div>';
+                            }
                         }else{
-                            inputs = inputs + '<label class="labelCardLeft">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'"></label>';
+                            if(fieldValue[4] == 1){
+                                inputs = inputs + '<label class="labelCardLeft">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'" required></label>';
+                            }else{
+                                inputs = inputs + '<label class="labelCardLeft">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'"></label>';
+                            }
                         }
                     }else{
-                        inputs = inputs + '<label class="labelCardRight">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'"></label>';
+                        if(fieldValue[4] == 1){
+                            inputs = inputs + '<label class="labelCardRight">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'" required></label>';
+                        }else{
+                            inputs = inputs + '<label class="labelCardRight">'+ fieldValue[1] +'<input class="myInput" name="'+ fieldValue[0] +'" type="'+ fieldValue[3] +'" title="'+ fieldValue[2] +'" placeholder="'+ fieldValue[2] +'"></label>';
+                        }
                     }
                     count++;
                 });
+                inputs = inputs + '<input type="hidden" name="modelId" value="'+ modelId +'">';
                 document.getElementById("secondPage").innerHTML = inputs;
             }, "html").fail(function () {
                 alert("Erro ao processar requisição!");

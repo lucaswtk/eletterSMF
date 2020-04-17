@@ -27,6 +27,8 @@
     "ext-pdo": "*",
     "coffeecode/datalayer": "1.1.*",
     "coffeecode/router": "1.0.*",
-    "league/plates": "v4.0.0-alpha"
+    "league/plates": "v4.0.0-alpha",
+    "ext-zip": "*",
+    "dompdf/dompdf": "^0.8.4"
   }
 }

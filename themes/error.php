@@ -2,7 +2,7 @@
 
 <?php
 if (empty($_SESSION['login'])):
-	$v->start('top-bar-error');
+	$v->start('side-bar-error');
 	?>
 	<nav class="main_nav">
 		<a title="Voltar ao início" href="<?= url(); ?>">Voltar</a>
@@ -14,5 +14,5 @@ endif;
 
 <div class="error">
 	<h2>Ooooops erro <?= $error ?>!</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto doloremque sit vero. Enim eum, ipsam.</p>
+    <p>Caso o erro persista, entrar em contrato com <a class="emailLink" href="mailto:lucasgabrielpdoliveira@gmail.com">lucasgabrielpdoliveira@gmail.com</a></p>
 </div>

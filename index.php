@@ -32,6 +32,7 @@ $router->get("/metadataCreate", "Web:metadataCreate", "web.metadataCreate");
 $router->post("/validateMetadata", "Web:validateMetadata", "web.validateMetadata");
 $router->get("/modelCreate", "Web:modelCreate", "web.modelCreate");
 $router->post("/validateModel", "Web:validateModel", "web.validateModel");
+$router->get("/lotSend", "Web:lotSend", "web.lotSend");
 
 /*
  * ERROS

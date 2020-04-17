@@ -2,7 +2,8 @@
 
 define("ROOT", "http://localhost/eletter");
 define("THEMES", __DIR__."/../themes");
-define("FILES", THEMES."/assets/files");
+define("FILES", THEMES."/assets/files/");
+define("TEMP", __DIR__."/../temp");
 define("SITE", "#Eletter");
 
 define("DATA_LAYER_CONFIG", [

@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<?= $v->section('top-bar-error'); ?>
-		<?php $v->insert('_top-bar'); ?>
+		<?= $v->section('side-bar-error'); ?>
+		<?php $v->insert('_side-bar'); ?>
 
         <?php if (!empty($_SESSION['login'])): ?>
             <main class="main_content">
