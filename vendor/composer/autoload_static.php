@@ -24,6 +24,10 @@ class ComposerStaticInite22351e6d2aa833fdc5c125cebd5d0a4
             'Svg\\' => 4,
             'Source\\' => 7,
         ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'L' => 
         array (
             'League\\Plates\\' => 14,
@@ -51,6 +55,10 @@ class ComposerStaticInite22351e6d2aa833fdc5c125cebd5d0a4
         'Source\\' => 
         array (
             0 => __DIR__ . '/../..' . '/source',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'League\\Plates\\' => 
         array (

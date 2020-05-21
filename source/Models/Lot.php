@@ -8,6 +8,6 @@ class Lot extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("lots", [], '', true);
+        parent::__construct("lots", [], 'id', true);
     }
 }

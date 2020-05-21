@@ -1,9 +1,9 @@
 <?php $v->layout("_theme.php") ?>
 
 <div class="content">
-    <h3>Dados do Destinatário</h3>
     <form method="POST" action="<?= $router->route('web.validateCard'); ?>">
         <div id="firstPage">
+            <h3>Dados do Destinatário</h3>
             <label class="labelCard">Nome
                 <input id="receiverName" class="myInput" type="text" name="receiverName" title="Nome do destinatário" placeholder="Nome completo do destinatário">
             </label>
@@ -12,7 +12,7 @@
                 <input id="receiverStreet" class="myInput" type="text" name="receiverStreet" title="Rua do destinatário" placeholder="Endereço do destinatário">
             </label>
 
-            <label class="labelCardRight">Número da residência
+            <label class="labelCardRight">Número
                 <input id="receiverNumberAddress" class="myInput" type="number" name="receiverNumberAddress" title="Número da residência" placeholder="Número da residência do destinatário">
             </label>
 
@@ -65,7 +65,7 @@
                 </select>
             </label class="labelCard">
 
-            <label class="labelCardRight">Modelo de documento
+            <label class="labelCardRight">Modelo
                 <select id="modelValue" class="myInput" title="Modelo do documento">
                     <option class="opt0">Selecione o modelo</option>
                     <?php foreach ($models as $model): ?>
@@ -99,7 +99,7 @@
 
         $("#modelValue").change(function(){
             let value = $("#modelValue option:selected").val();
-            let inputs = "";
+            let inputs = "<h3>Dados do modelo selecionado</h3>";
             $.post("<?= $router->route("web.fieldsFilter"); ?>", value, function (e) {
                 let values = e.split("$");
                 let aux  = values.length;

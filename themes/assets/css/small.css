@@ -1,0 +1,423 @@
+@font-face {
+    font-family: Monteserra;
+    src: url("../fonts/MontserratAlternates-Black.otf");
+}
+
+* {
+    font-family: "Open Sans", Tahoma, Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.faNav{
+    font-size: 25px !important;
+}
+
+.loginDiv{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.loginH3{
+    color: white;
+}
+
+.loginForm{
+    padding: 0 10% 0 10%;
+    top: -2%;
+    position: relative;
+}
+
+.loginImg{
+    position: relative;
+    width: 25%;
+    margin-bottom: 2%;
+}
+
+.loginRightSide{
+    float: right;
+    position: relative;
+    height: 48%;
+    width: 100%;
+    padding-top: 12%;
+    text-align: center;
+}
+
+.createRightSide{
+    float: right;
+    position: relative;
+    height: 48%;
+    width: 100%;
+    padding-top: 12%;
+    text-align: center;
+}
+
+.loginLeftSide{
+    float: left;
+    position: relative;
+    width: 100%;
+    background-color: #03aaaa;
+    padding: 8% 0 8% 0;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.loginFa{
+    float: left;
+    top: 33.5px;
+    position: relative;
+    left: 22px;
+    color: #03aaaa;
+}
+
+.loginLeftSideButton{
+    width: 100%;
+    position: relative;
+    height: 35px;
+    margin-top: 30px;
+}
+
+.btnLoginLeft{
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    padding: 7px;
+    background-color: #03aaaa;
+    width: 30%;
+    border-radius: 20px 20px 20px;
+    border: 1px solid;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btnLogin{
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    background-color: #03aaaa;
+    color: #ffffff;
+    border-radius: 20px 20px 20px;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.labelLogin{
+    color: #03aaaa;
+    font-size: 12px;
+    width: 100%;
+    float: left;
+}
+
+.loginInput{
+    font-size: 16px;
+    padding: 15px 20px 15px 45px;
+    margin-bottom: 12px;
+    color: #888888;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 0px 1px gray;
+    background-color: #fafafa;
+}
+
+h3{
+    font-size: 30px;
+    color: #03aaaa;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.opt0{
+    display: none;
+}
+
+.inputNumber{
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+.loginH3{
+    color: white;
+}
+
+p{
+    font-size: 11px;
+}
+
+.main_content{
+    z-index: 9;
+    display: flex;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 20% 8% 0 8%;
+}
+
+.home_content{
+    z-index: 9;
+    display: flex;
+    position: fixed;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 25%;
+}
+
+.main_nav {
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    font-weight: bold;
+    font-size: 12px;
+    background: #03aaaa;
+    width: 100%;
+}
+
+.navDiv{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 5% 0 10% 0;
+    display: none;
+}
+
+.navDivImg{
+    border-radius: 50%;
+    background-color: #fed247;
+    padding: 20px;
+    width: 60%;
+    height: auto;
+    box-shadow: 3px 2px 5px 0.1px #028e8e;
+    display: none;
+}
+
+.main_nav a {
+    display: inline-block;
+    color: #ffffff;
+    padding: 20px;
+    text-decoration: none;
+    width: 25%;
+    text-align: center;
+}
+
+.main_nav a:hover {
+    background: #05c6ab;
+}
+
+.navDate{
+    display: none;
+}
+
+.metadataCrete{
+    display: none !important;
+}
+
+.modelCreate{
+    display: none !important;
+}
+
+.lotSend{
+    display: none !important;
+}
+
+span{
+    display: none;
+}
+
+.homeDiv{
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 20px 20px 20px;
+    box-shadow: 0 0 2px #888;
+    background-color: #f8f8f8;
+    height: 55%;
+}
+
+.imgHome{
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.pHome{
+    font-weight: bold;
+    text-align: center;
+    color: #888888;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.labelCard{
+    color: #03aaaa;
+    font-size: 15px;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.labelCardLeft{
+    color: #03aaaa;
+    font-size: 15px;
+    margin-bottom: 20px;
+    width: 48%;
+    float: left;
+}
+
+.labelCardRight{
+    color: #03aaaa;
+    font-size: 15px;
+    margin-bottom: 20px;
+    width: 48%;
+    float: right;
+}
+
+.myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    padding: 10px 20px 10px 30px;
+    margin-bottom: 12px;
+    color: #888888;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #888888;
+}
+
+.btnCard{
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    background-color: #03aaaa;
+    color: #ffffff;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dashboardChart1{
+    display: none;
+}
+
+.dashboardChart2{
+    display: none;
+}
+
+.dashboardNav{
+    display: none;
+}
+
+.dashboardUsersTable{
+    margin-top: 20%;
+}
+
+.customers {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.customers td, .customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fbfbfb;
+    color: #656565;
+    box-shadow: 0px 2px 1px #9cadac;
+}
+
+.dashboardDiv{
+    position: absolute;
+    left: 0%;
+    top: 0;
+}
+
+.th1{
+    width: 30%;
+}
+
+.th2{
+    width: 10%;
+}
+
+.th3{
+    width: 20%;
+}
+
+.th4{
+    width: 5%;
+}
+
+.dashboardTd{
+    width: 25%;
+    text-align: center !important;
+}
+
+.dashboardFaConfirm{
+    font-size: 20px !important;
+    color: #03aaaa;
+}
+
+.dashboardFaTresh{
+    font-size: 20px !important;
+    color: #dc3912;
+}
+
+.spinnerDiv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    opacity: 0.3;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.spinner{
+    border: 8px solid rgb(173, 166, 166);
+    border-left-color: #03aaaa;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    top: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg);}
+}
+
+.dashboardDiv{
+    width: 100%;
+}

@@ -8,18 +8,18 @@ class User extends DataLayer
 {
 	public function __construct()
 	{
-		parent::__construct("users", ["name", "registration", "password", "organ"], 'id', false);
+		parent::__construct("users", ["name", "registration", "password", "organ", "email"], 'id', false);
 	}
 
-	public function save(): bool
-	{
-		$user = (new User())->find('registration = :reg', 'reg=' . $this->registration)->fetch();
-
-		if ($user) {
-			echo 'Esta matrícula já existe!';
-			return false;
-		}
-
-		return parent::save();
-	}
+//	public function save(): bool
+//	{
+//		$user = (new User())->find('registration = :reg', 'reg=' . $this->registration)->fetch();
+//
+//		if ($user) {
+//			echo 'Esta matrícula já existe!';
+//			return false;
+//		}
+//
+//		return parent::save();
+//	}
 }

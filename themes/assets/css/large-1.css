@@ -24,35 +24,62 @@ input[type=number] {
 }
 
 .main_nav {
-    display: flex;
-    flex-direction: column;
+    z-index: 9;
     position: fixed;
-    height: 100%;
+    width: 100%;
     font-weight: bold;
     font-size: 15px;
-    padding: 10px;
-    text-align: left;
-        background: #03aaaa;
+    background: #03aaaa;
+    text-align: center;
+    border-bottom: 0.1px solid #b5b5b5;
+    box-shadow: 2px 0.1px 5px #9cadac;
+}
+
+.faNav{
+    display: none !important;
 }
 
 .navImg{
     max-width: 100px;
-    position: relative;
-    top: 8px;
-    margin: 15% 0 12% 0;
+    /*position: relative;*/
+    /*top: 8px;*/
+    /*margin: 15% 0 12% 0;*/
 }
 
 .navDiv{
+    width: 100%;
     text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 5% 0 10% 0;
+}
+
+.navDivImg{
+    border-radius: 50%;
+    background-color: #fed247;
+    padding: 20px;
+    width: 60%;
+    height: auto;
+    box-shadow: 3px 2px 5px 0.1px #028e8e;
 }
 
 .main_nav a {
     display: inline-block;
     color: #ffffff;
-    padding: 10px 20px 25px 20px;
+    padding: 10px 10px 15px 10px;
     text-decoration: none;
-    border-bottom: 0.1px solid #fff;
-    margin: 0 20px 6% 25px;
+    margin: 10px;
+}
+
+.exit{
+    right: 20px;
+    float: right;
+    position: relative;
+}
+
+.fa-sign-out{
+    display: block !important;
+    float: left;
 }
 
 .main_nav a:hover {
@@ -62,12 +89,13 @@ input[type=number] {
 .main_content {
     padding: 5%;
     position: relative;
-    left: 10%;
-    top: 30px;
+    top: 50px;
 }
 
-.login_content {
-    padding: 4% 5% 5% 5%;
+.home_content {
+    padding: 5%;
+    position: relative;
+    top: 80px;
 }
 
 .content{
@@ -77,14 +105,14 @@ input[type=number] {
 
 .btnLogin{
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
     border: none;
     padding: 10px;
-    background: #03aaaa;
+    background-color: #03aaaa;
     color: #ffffff;
-    border-radius: 4px;
+    border-radius: 20px 20px 20px;
     margin-top: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 .labelLogin{
@@ -130,36 +158,82 @@ input[type=number] {
 
 
 .loginForm{
-    margin-left: 35%;
-    margin-right: 35%;
-    box-shadow: 0 0 4px 0.1px #888;
-    padding: 5%;
-    border-radius: 20px 20px 20px;
-    border-style: none;
-    background-color: #f8f8f8;
-}
-
-.loginInput{
-    font-size: 12px;
-    color: #888888;
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px 10px 10px;
-    margin-bottom: 2%;
-    border-style: double;
-    border-width: thin;
-    border-color: gray;
-    box-shadow: 0 0 1px 0.1px #888;
+    padding: 0 10% 0 10%;
+    top: -2%;
+    position: relative;
 }
 
 .loginImg{
     position: relative;
-    width: 70%;
-    margin-bottom: 5%;
+    width: 25%;
+    margin-bottom: 2%;
 }
 
 .loginDiv{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+}
+
+.loginLeftSide{
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 40%;
+    background-color: #03aaaa;
+    padding-top: 12%;
     text-align: center;
+    color: #f5f5f5;
+}
+
+.loginFa{
+    float: left;
+    top: 33.5px;
+    position: relative;
+    left: 22px;
+    color: #03aaaa;
+}
+
+.loginLeftSideButton{
+    width: 100%;
+    position: relative;
+    height: 35px;
+    margin-top: 30px;
+}
+
+.btnLoginLeft{
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    padding: 7px;
+    background-color: #03aaaa;
+    width: 30%;
+    border-radius: 20px 20px 20px;
+    border: 1px solid;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.loginRightSide{
+    float: right;
+    position: relative;
+    height: 100%;
+    width: 60%;
+    padding-top: 12%;
+    text-align: center;
+}
+
+.createRightSide{
+    float: right;
+    position: relative;
+    height: 100%;
+    width: 60%;
+    padding-top: 8%;
+    text-align: center;
+}
+
+.loginH3{
+    color: white;
 }
 
 .opt0{
@@ -181,7 +255,7 @@ input[type=number] {
     box-shadow: 0 0 5px 0.1px #888888;
     background-color: #f8f8f8;
     margin: 0 30% 0 30%;
-    height: 500px;
+    height: 450px;
     border-radius: 20px 20px 20px;
     padding-top: 80px;
     text-align: center;
@@ -228,8 +302,15 @@ button{
     border-bottom: 1px solid #888888;
 }
 
-.inputLogin{
-    background-color: #f8f8f8;
+.loginInput{
+    font-size: 16px;
+    padding: 15px 20px 15px 45px;
+    margin-bottom: 12px;
+    color: #888888;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 0px 1px gray;
+    background-color: #fafafa;
 }
 
 .myButton{
@@ -264,7 +345,7 @@ td{
 h3{
     font-size: 30px;
     color: #03aaaa;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     text-align: center;
 }
 
@@ -312,7 +393,7 @@ h4{
     padding: 12px;
     color: #ffffff;
     border-radius: 4px;
-    width: 30%;
+    width: 45%;
     background: #03aaaa;
     margin-top: 2%;
 }
@@ -368,15 +449,15 @@ h4{
 }
 
 .backImg{
-    background-image: linear-gradient(to bottom, rgba(3,170,170,0.8) 0%,rgba(3,170,170,0.8) 100%), url("../img/praia.jpeg");
-    background-size: cover;
+    /*background-image: linear-gradient(to bottom, rgba(3,170,170,0.8) 0%,rgba(3,170,170,0.8) 100%), url("../img/praia.jpeg");*/
+    /*background-size: cover;*/
 }
 
 .navDate{
     color: white;
     font-size: 12px;
     position: relative;
-    bottom: -100px;
+    bottom: -40px;
     text-align: center;
 }
 
@@ -446,4 +527,192 @@ input[type=checkbox]:checked:disabled + label:before {
 
 .emailLink{
     color: #03aaaa;
+}
+
+.dashboardDiv{
+    margin-left: 1.5%;
+    width: 100%;
+}
+
+.dashboardNav{
+    padding: 0 0 0 16%;
+    background-color: #fbfbfb;
+    height: 70px;
+    box-shadow: 3px 2px 8px #9cadac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboardNavA{
+    color: #656565;
+    font-weight: bold;
+}
+
+.dashboardChart1{
+    float: left;
+    width: 64%;
+    background-color: white;
+    box-shadow: 0 0 4px 0.1px #9cadac
+}
+
+.dashboardChart2{
+    float: right;
+    width: 34%;
+    background-color: white;
+    box-shadow: 0 0 4px 0.1px #9cadac
+}
+
+.dashboardDivChart{
+    padding: 2% 2% 0 18%;
+}
+
+#chart_div{
+    width: 100%;
+    height: 100%;
+}
+
+#piechart{
+    width: 100%;
+    height: 100%;
+}
+
+.dashboardUsersTable{
+    margin-top: 20%;
+}
+
+.customers {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.customers td, .customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fbfbfb;
+    color: #656565;
+    box-shadow: 0px 2px 1px #9cadac;
+}
+
+.th1{
+    width: 30%;
+}
+
+.th2{
+    width: 15%;
+}
+
+.th3{
+    width: 30%;
+}
+
+.th4{
+    width: 10%;
+}
+
+.dashboardTd{
+    text-align: center !important;
+}
+
+.dashboardFaConfirm{
+    font-size: 20px !important;
+    color: #03aaaa;
+}
+
+.dashboardFaTresh{
+    font-size: 20px !important;
+    color: #dc3912;
+}
+
+.dashboardFaShare{
+    font-size: 20px !important;
+    color: #0e7acc;
+}
+
+.fa{
+    cursor: pointer;
+}
+
+.spinnerDiv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    opacity: 0.3;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.spinner{
+    border: 8px solid rgb(173, 166, 166);
+    border-left-color: #03aaaa;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    top: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg);}
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+}
+.show {display: block;}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.cardTableC1{
+    width: 5%;
+}
+
+.cardTableC2{
+    width: 20%;
+}
+
+.cardTableC3{
+    width: 25%;
+}
+
+.cardTableC4{
+    width: 35%;
+}
+
+.cardTableC5{
+    width: 15%;
+    text-align: center !important   ;
 }

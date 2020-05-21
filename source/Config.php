@@ -6,11 +6,14 @@ define("FILES", THEMES."/assets/files/");
 define("TEMP", __DIR__."/../temp");
 define("SITE", "#Eletter");
 
+/**
+ * Database config
+ */
 define("DATA_LAYER_CONFIG", [
     "driver" => "mysql",
     "host" => "localhost",
     "port" => "3306",
-    "dbname" => "elleterbd",
+    "dbname" => "eletterbd",
     "username" => "root",
     "passwd" => "",
     "options" => [
@@ -19,6 +22,18 @@ define("DATA_LAYER_CONFIG", [
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
         PDO::ATTR_CASE => PDO::CASE_NATURAL
     ]
+]);
+
+/**
+ * Email config
+ */
+define("MAIL", [
+    "host" => "smtp.gmail.com",
+    "port" => "587",
+    "user" => "contatoeletter@gmail.com",
+    "passwd" => "eletterteste",
+    "from_name" => "Eletter",
+    "from_email" => "contatoeletter@gmail.com"
 ]);
 
 /**
